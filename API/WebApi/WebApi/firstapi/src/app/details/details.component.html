@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+<div class="container add ">
+    <h2 style="text-align: center;"> Detais </h2>
+    <div class="submit-form">
+      <div >
+        <div class="form-group">
+          <label for="Name">Name</label>
+          <input type="text" class="form-control" id="Name" required [(ngModel)]="employee.name" name="Name" disabled="disabled"  />
+        </div>
+        <div class="form-group">
+          <label for="Email">Email</label>
+          <input  type="email" class="form-control" id="Email" required [(ngModel)]="employee.email" name="Email" disabled="disabled" />
+        </div>
+  
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" class="form-control" id="phone" required [(ngModel)]="employee.phone" name="phone"disabled="disabled"  />
+        </div>
+        <div >
+          <button  class="btn btn-outline-danger view " (click)="deleteAll(employee.employeeID)" > Delete </button>
+          <button  class="btn btn-outline-primary view " (click)="back()" > back </button>
+          <button  class="btn btn-outline-success view " (click)="edit(employee)" > Edit </button>
+          
+        </div>
+      </div>
+  
+    </div>
+  </div>
+<footer></footer>
