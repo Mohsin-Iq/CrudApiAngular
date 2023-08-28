@@ -21,7 +21,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { DetailsComponent } from './details/details.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +47,7 @@ import { DetailsComponent } from './details/details.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-
+  
 
   ],
   providers: [],

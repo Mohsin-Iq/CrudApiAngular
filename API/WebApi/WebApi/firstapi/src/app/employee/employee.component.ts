@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../services/employee.service';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SnackService } from '../services/snack.service';
+
 
 @Component({
   selector: 'app-employee',
@@ -13,7 +14,8 @@ export class EmployeeComponent implements OnInit {
   constructor(private _server : EmployeeService ,
               private router : Router ,
                private route : ActivatedRoute,
-               private _snack : SnackService ){}
+               private _snack : SnackService,
+               ){}
 
   AllData: any[] =[  ];
   
@@ -26,13 +28,12 @@ export class EmployeeComponent implements OnInit {
   Show(){
    this._server.GetData().subscribe((data : any[]) => {
    this.AllData = data;
-   
+   console.log(data);
    }); 
   }
-  Onclick()
+  Onclick( )
   {
-   this.router.navigate(['create']);
-  
+  this.router.navigate(['create'])
   }
   deleteAll( employeeID : any ) {
     
